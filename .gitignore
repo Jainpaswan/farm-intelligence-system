@@ -1,0 +1,12 @@
+# Ignore model files
+api/models/
+*.joblib
+*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env
