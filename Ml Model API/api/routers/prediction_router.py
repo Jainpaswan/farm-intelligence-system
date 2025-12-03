@@ -1,24 +1,24 @@
 from fastapi import APIRouter
 from api.schemas.prediction_schema import YieldRequest
-from api.services.prediction_service import (
-    predict_yield,
-    optimize_inputs,
-    get_available_crops
-)
+from api.services.prediction_service import predict_yield, optimize_inputs
+from api.services.ai_service import generate_yield_advice
 
-router = APIRouter(prefix="/api", tags=["Prediction"])
-
-@router.get("/crops")
-def crops():
-    return {"available_crops": get_available_crops()}
+router = APIRouter(prefix="/api", tags=["Yield Prediction"])
 
 @router.post("/prediction")
 def prediction(req: YieldRequest):
     pred, total = predict_yield(req)
-    optimized = optimize_inputs(req)
+    opt = optimize_inputs(req)
+
+    ai_explanation = generate_yield_advice(
+        req.crop, pred, opt, req
+    )
 
     return {
-        "predicted_yield_ton_per_hectare": pred,
-        "total_production_ton": total,
-        **optimized
+        "prediction": {
+            "predicted_yield_ton_per_hectare": pred,
+            "total_production_ton": total
+        },
+        "optimization": opt,
+        "ai_advice": ai_explanation
     }
