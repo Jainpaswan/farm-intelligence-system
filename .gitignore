@@ -1,0 +1,47 @@
+# ---------------------------
+# GLOBAL IGNORES
+# ---------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.env
+
+# ---------------------------
+# PYTHON BACKEND
+# ---------------------------
+__pycache__/
+*.pyc
+*.pyo
+venv/
+env/
+
+# ML Model Files
+backend/api/models/*.pkl
+backend/api/models/*.sav
+backend/api/models/*.joblib
+
+# Logs
+*.log
+
+# ---------------------------
+# FRONTEND (React / Next.js)
+# ---------------------------
+frontend/node_modules/
+frontend/.next/
+frontend/dist/
+frontend/build/
+frontend/.expo/
+frontend/android/
+frontend/ios/
+
+# Local environment
+frontend/.env.local
+frontend/.env.development
+frontend/.env.production
+frontend/.env
+
+# ---------------------------
+# OS + Editor ignores
+# ---------------------------
+.idea/
+*.swp
