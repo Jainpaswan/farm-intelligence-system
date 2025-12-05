@@ -1,12 +1,18 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LandingPage } from "./pages/LandingPage";
 import { Dashboard } from "./pages/Dashboard";
 import CropPredictionPage from "./pages/CropPrediction";
+import CropRecommendationPage from "./pages/CropRecommendationPage";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<
-    "landing" | "dashboard" | "predict"
-  >("landing");
+
+  const [currentPage, setCurrentPage] = useState(() => {
+    return localStorage.getItem("currentPage") || "landing";
+  });
+
+  useEffect(() => {
+    localStorage.setItem("currentPage", currentPage);
+  }, [currentPage]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -14,6 +20,7 @@ export default function App() {
         <LandingPage
           onNavigateToDashboard={() => setCurrentPage("dashboard")}
           onNavigateToPrediction={() => setCurrentPage("predict")}
+          onNavigateToRecommendation={() => setCurrentPage("recommend")}
         />
       )}
 
@@ -22,10 +29,13 @@ export default function App() {
       )}
 
       {currentPage === "predict" && (
-        <CropPredictionPage
-          onBack={() => setCurrentPage("landing")}
-        />
+        <CropPredictionPage onBack={() => setCurrentPage("landing")} />
       )}
+
+      {currentPage === "recommend" && (
+        <CropRecommendationPage onBack={() => setCurrentPage("landing")} />
+      )}
+
     </div>
   );
 }

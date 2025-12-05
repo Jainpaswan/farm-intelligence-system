@@ -18,7 +18,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
             <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
               <span className="text-white text-xl">🌱</span>
             </div>
-            <span className="text-2xl text-gray-900">AgroSense</span>
+            <span className="text-2xl text-gray-900">FarmPredict</span>
           </div>
 
           {/* Desktop Navigation */}

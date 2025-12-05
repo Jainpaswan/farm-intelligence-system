@@ -11,11 +11,13 @@ import { Footer } from "../components/Footer";
 interface LandingPageProps {
   onNavigateToDashboard?: () => void;
   onNavigateToPrediction?: () => void;
+  onNavigateToRecommendation?: () => void;
 }
 
 export function LandingPage({
   onNavigateToDashboard,
-  onNavigateToPrediction
+  onNavigateToPrediction,
+   onNavigateToRecommendation
 }: LandingPageProps) {
   return (
     <>
@@ -27,7 +29,7 @@ export function LandingPage({
         />
 
         <Features />
-        <AIFeatures onNavigateToPrediction={onNavigateToPrediction} />
+        <AIFeatures onNavigateToPrediction={onNavigateToPrediction}  onNavigateToRecommendation={onNavigateToRecommendation} />
         <DashboardPreview />
         <HowItWorks />
         <Testimonials />

@@ -10,6 +10,7 @@ import { Button } from "./ui/button";
 
 interface AIFeaturesProps {
   onNavigateToPrediction?: () => void;
+  onNavigateToRecommendation?: () => void;
 }
 
 const aiFeatures = [
@@ -55,7 +56,10 @@ const aiFeatures = [
   },
 ];
 
-export function AIFeatures({ onNavigateToPrediction }: AIFeaturesProps) {
+export function AIFeatures({
+  onNavigateToPrediction,
+  onNavigateToRecommendation,
+}: AIFeaturesProps) {
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4">
@@ -120,7 +124,10 @@ export function AIFeatures({ onNavigateToPrediction }: AIFeaturesProps) {
                         if (feature.title === "Crop Yield Prediction") {
                           onNavigateToPrediction?.();
                         }
-                        // do nothing for other features
+
+                        if (feature.title === "Crop Recommendation") {
+                          onNavigateToRecommendation?.();
+                        }
                       }}
                     >
                       Learn More
