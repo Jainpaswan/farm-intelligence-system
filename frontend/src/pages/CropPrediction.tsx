@@ -65,6 +65,38 @@ export default function CropPredictionPage({
     setLoading(false);
   };
 
+  //Detect location (stub function)
+  const detectLocation = () => {
+  if (!navigator.geolocation) {
+    alert("Geolocation is not supported by your browser.");
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(async (position) => {
+    const { latitude, longitude } = position.coords;
+
+    try {
+      const res = await fetch(
+        `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+      );
+
+      const data = await res.json();
+
+      const detectedState =
+        data?.address?.state || data?.address?.region || "";
+
+      if (detectedState) {
+        setForm((prev) => ({ ...prev, state: detectedState }));
+      } else {
+        alert("Couldn't detect state. Please enter manually.");
+      }
+    } catch (e) {
+      console.log("Location fetch error:", e);
+    }
+  });
+};
+
+
   return (
     <div className="w-full min-h-screen bg-gray-50 py-16 px-6 flex justify-center">
       {loading && <PredictionLoader />}   {/* 🔥 Show loader on prediction */}
@@ -93,13 +125,31 @@ export default function CropPredictionPage({
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input
+            {/* <input
               name="state"
               placeholder="State (e.g., Rajasthan)"
               value={form.state}
               onChange={handleChange}
               className="border p-3 rounded-lg"
-            />
+            /> */}
+            <div className="flex gap-3">
+              <input
+                name="state"
+                placeholder="State (auto-detect)"
+                value={form.state}
+                onChange={handleChange}
+                className="border p-3 rounded-lg w-full"
+              />
+
+              <button
+                onClick={detectLocation}
+                type="button"
+                className="px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg"
+              >
+                Detect
+              </button>
+            </div>
+
             <input
               name="crop"
               placeholder="Crop (e.g., Wheat)"
