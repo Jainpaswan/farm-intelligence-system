@@ -3,6 +3,7 @@ import { LandingPage } from "./pages/LandingPage";
 import { Dashboard } from "./pages/Dashboard";
 import CropPredictionPage from "./pages/CropPrediction";
 import CropRecommendationPage from "./pages/CropRecommendationPage";
+import DiseaseDetection from "./pages/DiseaseDetection";
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
           onNavigateToDashboard={() => setCurrentPage("dashboard")}
           onNavigateToPrediction={() => setCurrentPage("predict")}
           onNavigateToRecommendation={() => setCurrentPage("recommend")}
+          onNavigateToDiseaseDetection={() => setCurrentPage("disease")}
         />
       )}
 
@@ -34,6 +36,10 @@ export default function App() {
 
       {currentPage === "recommend" && (
         <CropRecommendationPage onBack={() => setCurrentPage("landing")} />
+      )}
+
+      {currentPage === "disease" && (
+        <DiseaseDetection onBack={() => setCurrentPage("landing")} />
       )}
 
     </div>

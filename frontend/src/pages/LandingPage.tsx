@@ -12,12 +12,14 @@ interface LandingPageProps {
   onNavigateToDashboard?: () => void;
   onNavigateToPrediction?: () => void;
   onNavigateToRecommendation?: () => void;
+  onNavigateToDiseaseDetection: () => void;
 }
 
 export function LandingPage({
   onNavigateToDashboard,
   onNavigateToPrediction,
-   onNavigateToRecommendation
+   onNavigateToRecommendation,
+  onNavigateToDiseaseDetection,
 }: LandingPageProps) {
   return (
     <>
@@ -29,7 +31,10 @@ export function LandingPage({
         />
 
         <Features />
-        <AIFeatures onNavigateToPrediction={onNavigateToPrediction}  onNavigateToRecommendation={onNavigateToRecommendation} />
+        <AIFeatures 
+        onNavigateToPrediction={onNavigateToPrediction}  
+        onNavigateToRecommendation={onNavigateToRecommendation} 
+        onNavigateToDiseaseDetection={onNavigateToDiseaseDetection} />
         <DashboardPreview />
         <HowItWorks />
         <Testimonials />

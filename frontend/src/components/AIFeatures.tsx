@@ -11,6 +11,7 @@ import { Button } from "./ui/button";
 interface AIFeaturesProps {
   onNavigateToPrediction?: () => void;
   onNavigateToRecommendation?: () => void;
+  onNavigateToDiseaseDetection?: () => void;
 }
 
 const aiFeatures = [
@@ -59,6 +60,7 @@ const aiFeatures = [
 export function AIFeatures({
   onNavigateToPrediction,
   onNavigateToRecommendation,
+  onNavigateToDiseaseDetection,
 }: AIFeaturesProps) {
   return (
     <section className="py-20 md:py-28 bg-white">
@@ -127,6 +129,9 @@ export function AIFeatures({
 
                         if (feature.title === "Crop Recommendation") {
                           onNavigateToRecommendation?.();
+                        }
+                         if (feature.title === "Disease Detection") {
+                          onNavigateToDiseaseDetection?.();
                         }
                       }}
                     >
