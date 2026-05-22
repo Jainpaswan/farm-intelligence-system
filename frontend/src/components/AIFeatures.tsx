@@ -12,6 +12,7 @@ interface AIFeaturesProps {
   onNavigateToPrediction?: () => void;
   onNavigateToRecommendation?: () => void;
   onNavigateToDiseaseDetection?: () => void;
+  onNavigateToChatbot?: () => void;
 }
 
 const aiFeatures = [
@@ -61,6 +62,7 @@ export function AIFeatures({
   onNavigateToPrediction,
   onNavigateToRecommendation,
   onNavigateToDiseaseDetection,
+  onNavigateToChatbot,
 }: AIFeaturesProps) {
   return (
     <section className="py-20 md:py-28 bg-white">
@@ -132,6 +134,9 @@ export function AIFeatures({
                         }
                          if (feature.title === "Disease Detection") {
                           onNavigateToDiseaseDetection?.();
+                        }
+                          if (feature.title === "AI Chat Support") {
+                          onNavigateToChatbot?.();
                         }
                       }}
                     >

@@ -13,6 +13,7 @@ interface LandingPageProps {
   onNavigateToPrediction?: () => void;
   onNavigateToRecommendation?: () => void;
   onNavigateToDiseaseDetection: () => void;
+  onNavigateToChatBot: () => void;
 }
 
 export function LandingPage({
@@ -20,6 +21,7 @@ export function LandingPage({
   onNavigateToPrediction,
    onNavigateToRecommendation,
   onNavigateToDiseaseDetection,
+  onNavigateToChatBot,
 }: LandingPageProps) {
   return (
     <>
@@ -34,7 +36,9 @@ export function LandingPage({
         <AIFeatures 
         onNavigateToPrediction={onNavigateToPrediction}  
         onNavigateToRecommendation={onNavigateToRecommendation} 
-        onNavigateToDiseaseDetection={onNavigateToDiseaseDetection} />
+        onNavigateToDiseaseDetection={onNavigateToDiseaseDetection}
+        onNavigateToChatbot={onNavigateToChatBot}
+         />
         <DashboardPreview />
         <HowItWorks />
         <Testimonials />

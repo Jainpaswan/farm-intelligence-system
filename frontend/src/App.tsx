@@ -4,6 +4,7 @@ import { Dashboard } from "./pages/Dashboard";
 import CropPredictionPage from "./pages/CropPrediction";
 import CropRecommendationPage from "./pages/CropRecommendationPage";
 import DiseaseDetection from "./pages/DiseaseDetection";
+import ChatBot from "./pages/Chatbot";
 
 export default function App() {
 
@@ -23,6 +24,7 @@ export default function App() {
           onNavigateToPrediction={() => setCurrentPage("predict")}
           onNavigateToRecommendation={() => setCurrentPage("recommend")}
           onNavigateToDiseaseDetection={() => setCurrentPage("disease")}
+          onNavigateToChatBot={() => setCurrentPage("chatbot")}
         />
       )}
 
@@ -40,6 +42,10 @@ export default function App() {
 
       {currentPage === "disease" && (
         <DiseaseDetection onBack={() => setCurrentPage("landing")} />
+      )}
+
+      {currentPage === "chatbot" && (
+        <ChatBot onBack={() => setCurrentPage("landing")} />
       )}
 
     </div>
