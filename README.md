@@ -1,3 +1,13 @@
+---
+title: Farm Intelligence API
+emoji: 🌾
+colorFrom: green
+colorTo: blue
+sdk: docker
+pinned: false
+---
+
+
 # farm-intelligence-system
 Here you go bro — **a fully aesthetic, beautifully formatted, professional README.md** with emojis, badges, sections, colors, structure, and perfect GitHub display support.
 
