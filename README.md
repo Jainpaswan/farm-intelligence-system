@@ -1,4 +1,11 @@
-
+---
+title: Farm Intelligence API
+emoji: 🌾
+colorFrom: green
+colorTo: blue
+sdk: docker
+pinned: false
+---
 
 
 # farm-intelligence-system
