@@ -41,7 +41,7 @@ const DiseaseDetection = ({ onBack }: DiseaseDetectionProps) => {
       formData.append("file", selectedImage);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/disease/predict",
+        "https://codeml707-farm-intelligence-api.hf.space/disease/predict",
         {
           method: "POST",
           body: formData,

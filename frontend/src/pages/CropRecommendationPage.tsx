@@ -33,7 +33,7 @@ export default function CropRecommendationPage({ onBack }: CropRecommendationPag
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/api/recommend", {
+      const res = await fetch("https://codeml707-farm-intelligence-api.hf.space/api/recommend", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

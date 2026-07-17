@@ -41,7 +41,7 @@ export default function CropPredictionPage({
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/api/prediction", {
+      const res = await fetch("https://codeml707-farm-intelligence-api.hf.space/api/prediction", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
