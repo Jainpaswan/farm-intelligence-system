@@ -5,6 +5,7 @@ from api.routers.recommend_router import router as recommend_router
 from api.routers.hybrid_router import router as hybrid_router
 from fastapi.middleware.cors import CORSMiddleware
 from api.routers.disease_router import disease_router
+from api.routers.translate import router as translate
 
 app = FastAPI(
     title="FarmPredict API",
@@ -16,6 +17,7 @@ app.include_router(prediction_router)
 app.include_router(recommend_router)
 app.include_router(hybrid_router)
 app.include_router(disease_router)
+app.include_router(translate)
 @app.get("/health")
 def health_check():
     return {"status": "OK"}

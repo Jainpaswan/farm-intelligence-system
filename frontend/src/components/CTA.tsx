@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import TranslateText from "./TranslateText";
 
 export function CTA() {
   return (
@@ -15,20 +16,19 @@ export function CTA() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-            Ready to Transform Your Farm?
+            <TranslateText>Ready to Transform Your Farm?</TranslateText>
           </h2>
           <p className="text-xl text-green-50 mb-8 max-w-2xl mx-auto">
-            Join thousands of farmers who are already using AI to grow smarter, 
-            not harder. Start your free 30-day trial today.
+            <TranslateText>Join thousands of farmers who are already using AI to grow smarter, not harder. Start your free 30-day trial today.</TranslateText>
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-6">
-              Start Free Trial
+              <TranslateText>Start Free Trial</TranslateText>
               <ArrowRight className="ml-2" size={20} />
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 text-lg px-8 py-6">
-              Schedule a Demo
+              <TranslateText>Schedule a Demo</TranslateText>
             </Button>
           </div>
 
@@ -36,15 +36,21 @@ export function CTA() {
           <div className="flex flex-wrap justify-center gap-8 text-green-50">
             <div className="flex items-center gap-2">
               <span className="text-2xl">✓</span>
-              <span>No credit card required</span>
+              <span>
+                <TranslateText>No credit card required</TranslateText>
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-2xl">✓</span>
-              <span>30-day free trial</span>
+              <span>
+                <TranslateText>30-day free trial</TranslateText>
+              </span>
             </div>
             <div className="flex items-center gap-2">
               <span className="text-2xl">✓</span>
-              <span>Cancel anytime</span>
+              <span>
+                <TranslateText>Cancel anytime</TranslateText>
+              </span>
             </div>
           </div>
         </div>

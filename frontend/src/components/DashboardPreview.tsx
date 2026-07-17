@@ -1,6 +1,7 @@
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { TrendingUp, Activity, MapPin, Bell, Calendar, Droplet } from "lucide-react";
+import TranslateText from "./TranslateText";
 
 export function DashboardPreview() {
   return (
@@ -9,14 +10,16 @@ export function DashboardPreview() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full mb-4">
-            Dashboard Preview
+            <TranslateText>Dashboard Preview</TranslateText>
           </div>
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
             Your Farm at a{" "}
-            <span className="text-green-600">Glance</span>
+            <span className="text-green-600">
+              <TranslateText>Glance</TranslateText>
+            </span>
           </h2>
           <p className="text-xl text-gray-600">
-            Monitor, analyze, and optimize your entire farming operation from one powerful dashboard
+            <TranslateText>Monitor, analyze, and optimize your entire farming operation from one powerful dashboard</TranslateText>
           </p>
         </div>
 
@@ -31,8 +34,12 @@ export function DashboardPreview() {
                     <span className="text-3xl">👨‍🌾</span>
                   </div>
                   <div>
-                    <div className="text-white text-sm opacity-90">Welcome back,</div>
-                    <div className="text-white text-2xl">John's Farm</div>
+                    <div className="text-white text-sm opacity-90">
+                      <TranslateText>Welcome back,</TranslateText>
+                    </div>
+                    <div className="text-white text-2xl">
+                      <TranslateText>John's Farm</TranslateText>
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -41,7 +48,7 @@ export function DashboardPreview() {
                   </Button>
                   <Button className="bg-white text-green-600 hover:bg-gray-100">
                     <TrendingUp className="mr-2" size={18} />
-                    Start Prediction
+                    <TranslateText>Start Prediction</TranslateText>
                   </Button>
                 </div>
               </div>
@@ -59,7 +66,9 @@ export function DashboardPreview() {
                     <span className="text-xs text-blue-600 bg-blue-200 px-2 py-1 rounded-full">+2 new</span>
                   </div>
                   <div className="text-3xl text-blue-700 mb-1">24</div>
-                  <div className="text-sm text-blue-600">Total Fields</div>
+                  <div className="text-sm text-blue-600">
+                    <TranslateText>Total Fields</TranslateText>
+                  </div>
                 </Card>
 
                 <Card className="p-6 bg-gradient-to-br from-green-50 to-green-100 border-green-200">
@@ -67,10 +76,14 @@ export function DashboardPreview() {
                     <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
                       <Activity className="text-white" size={24} />
                     </div>
-                    <span className="text-xs text-green-600 bg-green-200 px-2 py-1 rounded-full">Excellent</span>
+                    <span className="text-xs text-green-600 bg-green-200 px-2 py-1 rounded-full">
+                      <TranslateText>Excellent</TranslateText>
+                    </span>
                   </div>
                   <div className="text-3xl text-green-700 mb-1">98.5%</div>
-                  <div className="text-sm text-green-600">Avg Health Score</div>
+                  <div className="text-sm text-green-600">
+                    <TranslateText>Avg Health Score</TranslateText>
+                  </div>
                 </Card>
 
                 <Card className="p-6 bg-gradient-to-br from-purple-50 to-purple-100 border-purple-200">
@@ -78,10 +91,14 @@ export function DashboardPreview() {
                     <div className="w-12 h-12 bg-purple-500 rounded-xl flex items-center justify-center">
                       <TrendingUp className="text-white" size={24} />
                     </div>
-                    <span className="text-xs text-purple-600 bg-purple-200 px-2 py-1 rounded-full">+12%</span>
+                    <span className="text-xs text-purple-600 bg-purple-200 px-2 py-1 rounded-full">
+                      <TranslateText>+12%</TranslateText>
+                    </span>
                   </div>
                   <div className="text-3xl text-purple-700 mb-1">8.5T</div>
-                  <div className="text-sm text-purple-600">Expected Yield</div>
+                  <div className="text-sm text-purple-600">
+                    <TranslateText>Expected Yield</TranslateText>
+                  </div>
                 </Card>
 
                 <Card className="p-6 bg-gradient-to-br from-cyan-50 to-cyan-100 border-cyan-200">
@@ -89,10 +106,14 @@ export function DashboardPreview() {
                     <div className="w-12 h-12 bg-cyan-500 rounded-xl flex items-center justify-center">
                       <Droplet className="text-white" size={24} />
                     </div>
-                    <span className="text-xs text-cyan-600 bg-cyan-200 px-2 py-1 rounded-full">-15%</span>
+                    <span className="text-xs text-cyan-600 bg-cyan-200 px-2 py-1 rounded-full">
+                      <TranslateText>-15%</TranslateText>
+                    </span>
                   </div>
                   <div className="text-3xl text-cyan-700 mb-1">2.4M</div>
-                  <div className="text-sm text-cyan-600">Water Usage (L)</div>
+                  <div className="text-sm text-cyan-600">
+                    <TranslateText>Water Usage (L)</TranslateText>
+                  </div>
                 </Card>
               </div>
 
@@ -102,35 +123,53 @@ export function DashboardPreview() {
                 <Card className="p-6 lg:col-span-2">
                   <div className="flex items-center justify-between mb-6">
                     <div>
-                      <h3 className="text-lg text-gray-900">Yield Prediction</h3>
-                      <p className="text-sm text-gray-600">Monthly forecast for 2025</p>
+                      <h3 className="text-lg text-gray-900">
+                        <TranslateText>Yield Prediction</TranslateText>
+                      </h3>
+                      <p className="text-sm text-gray-600">
+                        <TranslateText>Monthly forecast for 2025</TranslateText>
+                      </p>
                     </div>
-                    <Button variant="outline" size="sm">View Details</Button>
+                    <Button variant="outline" size="sm">
+                      <TranslateText>View Details</TranslateText>
+                    </Button>
                   </div>
                   <div className="flex items-end justify-between h-64 gap-4">
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <div className="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style={{ height: '60%' }}></div>
-                      <span className="text-xs text-gray-600">Jan</span>
+                      <span className="text-xs text-gray-600">
+                        <TranslateText>Jan</TranslateText>
+                      </span>
                     </div>
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <div className="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style={{ height: '70%' }}></div>
-                      <span className="text-xs text-gray-600">Feb</span>
+                      <span className="text-xs text-gray-600">
+                        <TranslateText>Feb</TranslateText>
+                      </span>
                     </div>
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <div className="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style={{ height: '75%' }}></div>
-                      <span className="text-xs text-gray-600">Mar</span>
+                      <span className="text-xs text-gray-600">
+                        <TranslateText>Mar</TranslateText>
+                      </span>
                     </div>
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <div className="w-full bg-gradient-to-t from-green-500 to-green-400 rounded-t" style={{ height: '85%' }}></div>
-                      <span className="text-xs text-gray-600">Apr</span>
+                      <span className="text-xs text-gray-600">
+                        <TranslateText>Apr</TranslateText>
+                        </span>
                     </div>
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <div className="w-full bg-gradient-to-t from-green-600 to-green-500 rounded-t" style={{ height: '95%' }}></div>
-                      <span className="text-xs text-gray-600">May</span>
+                      <span className="text-xs text-gray-600">
+                        <TranslateText>May</TranslateText>
+                      </span>
                     </div>
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <div className="w-full bg-gradient-to-t from-blue-500 to-blue-400 rounded-t opacity-60" style={{ height: '100%' }}></div>
-                      <span className="text-xs text-gray-600">Jun</span>
+                      <span className="text-xs text-gray-600">
+                        <TranslateText>Jun</TranslateText>
+                      </span>
                     </div>
                   </div>
                 </Card>
@@ -138,7 +177,9 @@ export function DashboardPreview() {
                 {/* Recent Alerts */}
                 <Card className="p-6">
                   <div className="flex items-center justify-between mb-6">
-                    <h3 className="text-lg text-gray-900">Recent Alerts</h3>
+                    <h3 className="text-lg text-gray-900">
+                      <TranslateText>Recent Alerts</TranslateText>
+                    </h3>
                     <Bell size={18} className="text-gray-600" />
                   </div>
                   <div className="space-y-4">
@@ -147,9 +188,15 @@ export function DashboardPreview() {
                         <span className="text-sm">🐛</span>
                       </div>
                       <div className="flex-1">
-                        <div className="text-sm text-gray-900">Pest Detected</div>
-                        <div className="text-xs text-gray-600">Field A - North</div>
-                        <div className="text-xs text-gray-500 mt-1">2 hours ago</div>
+                        <div className="text-sm text-gray-900">
+                          <TranslateText>Pest Detected</TranslateText>
+                        </div>
+                        <div className="text-xs text-gray-600">
+                          <TranslateText>Field A - North</TranslateText>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          <TranslateText>2 hours ago</TranslateText>
+                        </div>
                       </div>
                     </div>
 
@@ -158,9 +205,15 @@ export function DashboardPreview() {
                         <span className="text-sm">⚠️</span>
                       </div>
                       <div className="flex-1">
-                        <div className="text-sm text-gray-900">Low Soil Moisture</div>
-                        <div className="text-xs text-gray-600">Field C - South</div>
-                        <div className="text-xs text-gray-500 mt-1">5 hours ago</div>
+                        <div className="text-sm text-gray-900">
+                          <TranslateText>Low Soil Moisture</TranslateText>
+                        </div>
+                        <div className="text-xs text-gray-600">
+                          <TranslateText>Field C - South</TranslateText>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          <TranslateText>5 hours ago</TranslateText>
+                        </div>
                       </div>
                     </div>
 
@@ -169,9 +222,15 @@ export function DashboardPreview() {
                         <span className="text-sm">✓</span>
                       </div>
                       <div className="flex-1">
-                        <div className="text-sm text-gray-900">Irrigation Complete</div>
-                        <div className="text-xs text-gray-600">Field B - All Zones</div>
-                        <div className="text-xs text-gray-500 mt-1">1 day ago</div>
+                        <div className="text-sm text-gray-900">
+                          <TranslateText>Irrigation Complete</TranslateText>
+                        </div>
+                        <div className="text-xs text-gray-600">
+                          <TranslateText>Field B - All Zones</TranslateText>
+                        </div>
+                        <div className="text-xs text-gray-500 mt-1">
+                          <TranslateText>1 day ago</TranslateText>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -182,15 +241,15 @@ export function DashboardPreview() {
               <div className="flex flex-wrap gap-3">
                 <Button variant="outline">
                   <Calendar className="mr-2" size={18} />
-                  Schedule Irrigation
+                  <TranslateText>Schedule Irrigation</TranslateText>
                 </Button>
                 <Button variant="outline">
                   <Activity className="mr-2" size={18} />
-                  View Health Reports
+                  <TranslateText>View Health Reports</TranslateText>
                 </Button>
                 <Button variant="outline">
                   <TrendingUp className="mr-2" size={18} />
-                  Market Insights
+                  <TranslateText>Market Insights</TranslateText>
                 </Button>
               </div>
             </div>
@@ -200,10 +259,10 @@ export function DashboardPreview() {
         {/* CTA */}
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-4">
-            Experience the full power of AgroSense Dashboard
+            <TranslateText>Experience the full power of AgroSense Dashboard</TranslateText>
           </p>
           <Button size="lg" className="bg-green-600 hover:bg-green-700">
-            Try Dashboard Demo
+            <TranslateText>Try Dashboard Demo</TranslateText>
           </Button>
         </div>
       </div>

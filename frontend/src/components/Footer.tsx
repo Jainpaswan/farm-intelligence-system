@@ -1,4 +1,5 @@
 import { Facebook, Twitter, Instagram, Linkedin, Mail } from "lucide-react";
+import TranslateText from "./TranslateText";
 
 export function Footer() {
   return (
@@ -11,10 +12,12 @@ export function Footer() {
               <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-700 rounded-lg flex items-center justify-center">
                 <span className="text-white text-xl">🌱</span>
               </div>
-              <span className="text-2xl text-white">AgroSense</span>
+              <span className="text-2xl text-white">
+                <TranslateText>AgroSense</TranslateText>
+              </span>
             </div>
             <p className="text-gray-400 mb-4">
-              Empowering farmers with AI-powered tools for sustainable and profitable agriculture.
+              <TranslateText>Empowering farmers with AI-powered tools for sustainable and profitable agriculture.</TranslateText>
             </p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-green-500 transition-colors">
@@ -34,26 +37,28 @@ export function Footer() {
 
           {/* Product */}
           <div>
-            <h3 className="text-white text-lg mb-4">Product</h3>
-            <ul className="space-y-2">
+              <h3 className="text-white text-lg mb-4">
+                <TranslateText>Product</TranslateText>
+              </h3>
+              <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:text-green-500 transition-colors">
-                  Features
+                  <TranslateText>Features</TranslateText>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-green-500 transition-colors">
-                  Pricing
+                  <TranslateText>Pricing</TranslateText>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-green-500 transition-colors">
-                  Case Studies
+                  <TranslateText>Case Studies</TranslateText>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-green-500 transition-colors">
-                  Integrations
+                  <TranslateText>Integrations</TranslateText>
                 </a>
               </li>
             </ul>
@@ -61,16 +66,18 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white text-lg mb-4">Company</h3>
+            <h3 className="text-white text-lg mb-4">
+              <TranslateText>Company</TranslateText>
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="hover:text-green-500 transition-colors">
-                  About Us
+                  <TranslateText>About Us</TranslateText>
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-green-500 transition-colors">
-                  Careers
+                  <TranslateText>Careers</TranslateText>
                 </a>
               </li>
               <li>
@@ -80,7 +87,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#" className="hover:text-green-500 transition-colors">
-                  Contact
+                  <TranslateText>Contact</TranslateText>
                 </a>
               </li>
             </ul>
@@ -88,9 +95,11 @@ export function Footer() {
 
           {/* Newsletter */}
           <div>
-            <h3 className="text-white text-lg mb-4">Stay Updated</h3>
+            <h3 className="text-white text-lg mb-4">
+              <TranslateText>Stay Updated</TranslateText>
+            </h3>
             <p className="text-gray-400 mb-4">
-              Get the latest agricultural insights and updates delivered to your inbox.
+              <TranslateText>Get the latest agricultural insights and updates delivered to your inbox.</TranslateText>
             </p>
             <div className="flex gap-2">
               <input
@@ -109,17 +118,17 @@ export function Footer() {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
-              © 2025 AgroSense. All rights reserved.
+              <TranslateText> © 2025 AgroSense. All rights reserved.</TranslateText>
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="hover:text-green-500 transition-colors">
-                Privacy Policy
+                <TranslateText>Privacy Policy</TranslateText>
               </a>
               <a href="#" className="hover:text-green-500 transition-colors">
-                Terms of Service
+                <TranslateText>Terms of Service</TranslateText>
               </a>
               <a href="#" className="hover:text-green-500 transition-colors">
-                Cookie Policy
+                <TranslateText>Cookie Policy</TranslateText>
               </a>
             </div>
           </div>

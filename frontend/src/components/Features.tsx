@@ -1,5 +1,6 @@
 import { Card } from "./ui/card";
 import { Brain, Cloud, Bug, TrendingUp, Droplet, BarChart3 } from "lucide-react";
+import TranslateText from "./TranslateText";
 
 const features = [
   {
@@ -47,14 +48,14 @@ export function Features() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full mb-4">
-            Features
+            <TranslateText>Features</TranslateText>
           </div>
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
-            Everything You Need for{" "}
+            <TranslateText>Everything You Need for</TranslateText>{" "}
             <span className="text-green-600">Smart Farming</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Powerful AI-driven tools designed specifically for modern agriculture
+            <TranslateText>Powerful AI-driven tools designed specifically for modern agriculture</TranslateText>
           </p>
         </div>
 
@@ -72,8 +73,12 @@ export function Features() {
                 >
                   <Icon className="text-white" size={28} />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <h3 className="text-xl text-gray-900 mb-3">
+                  <TranslateText>{feature.title}</TranslateText>
+                </h3>
+                <p className="text-gray-600">
+                  <TranslateText>{feature.description}</TranslateText>
+                </p>
               </Card>
             );
           })}

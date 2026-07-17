@@ -9,6 +9,7 @@ import {
   User,
 } from "lucide-react";
 
+
 import { useState } from "react";
 
 import {
@@ -18,12 +19,24 @@ import {
   UserButton,
 } from "@clerk/clerk-react";
 
+import { useTranslatedText } from "../hooks/useTranslatedText";
+import LanguageSwitcher from "./LanguageSwitcher";
+import TranslateText from "./TranslateText";
+
 interface HeaderProps {
   onNavigateToDashboard?: () => void;
 }
 
 export function Header({ onNavigateToDashboard }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const home = useTranslatedText("Home");
+const aiFeatures = useTranslatedText("AI Features");
+const solutions = useTranslatedText("Solutions");
+const dashboard = useTranslatedText("Dashboard");
+const contact = useTranslatedText("Contact");
+const signIn = useTranslatedText("Sign In");
+const getStarted = useTranslatedText("Get Started");
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm">
@@ -49,7 +62,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all"
             >
               <Home size={18} />
-              <span>Home</span>
+              <span>{home}</span>
             </a>
 
             <a
@@ -57,7 +70,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all"
             >
               <Cpu size={18} />
-              <span>AI Features</span>
+              <span>{aiFeatures}</span>
             </a>
 
             <a
@@ -65,7 +78,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all"
             >
               <BarChart3 size={18} />
-              <span>Solutions</span>
+              <span>{solutions}</span>
             </a>
 
             <button
@@ -73,7 +86,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all"
             >
               <MessageSquare size={18} />
-              <span>Dashboard</span>
+              <span>{dashboard}</span>
             </button>
 
             <a
@@ -81,18 +94,20 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 px-4 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded-lg transition-all"
             >
               <User size={18} />
-              <span>Contact</span>
+              <span>{contact}</span>
             </a>
 
           </div>
 
           {/* Desktop CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
+             
+             <LanguageSwitcher />
 
             <SignedOut>
               <SignInButton mode="modal">
                 <Button variant="ghost">
-                  Sign In
+                 {signIn}
                 </Button>
               </SignInButton>
             </SignedOut>
@@ -102,7 +117,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
             </SignedIn>
 
             <Button className="bg-green-600 hover:bg-green-700">
-              Get Started
+             {getStarted}
             </Button>
 
           </div>
@@ -113,6 +128,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            
           </button>
 
         </div>
@@ -126,7 +142,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 py-2 text-gray-600 hover:text-green-600 transition-colors"
             >
               <Home size={18} />
-              <span>Home</span>
+              <span>{home}</span>
             </a>
 
             <a
@@ -134,7 +150,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 py-2 text-gray-600 hover:text-green-600 transition-colors"
             >
               <Cpu size={18} />
-              <span>AI Features</span>
+              <span>{aiFeatures}</span>
             </a>
 
             <a
@@ -142,7 +158,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 py-2 text-gray-600 hover:text-green-600 transition-colors"
             >
               <BarChart3 size={18} />
-              <span>Solutions</span>
+              <span>{solutions}</span>
             </a>
 
             <button
@@ -150,7 +166,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 py-2 text-gray-600 hover:text-green-600 transition-colors"
             >
               <MessageSquare size={18} />
-              <span>Dashboard</span>
+              <span><TranslateText>Dashboard</TranslateText></span>
             </button>
 
             <a
@@ -158,16 +174,17 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               className="flex items-center gap-2 py-2 text-gray-600 hover:text-green-600 transition-colors"
             >
               <User size={18} />
-              <span>Contact</span>
+              <span><TranslateText>Contact</TranslateText>    </span>
             </a>
 
             {/* Mobile CTA */}
             <div className="pt-3 space-y-2">
+               <LanguageSwitcher />
 
               <SignedOut>
                 <SignInButton mode="modal">
                   <Button variant="ghost" className="w-full">
-                    Sign In
+                    {signIn}
                   </Button>
                 </SignInButton>
               </SignedOut>
@@ -179,7 +196,7 @@ export function Header({ onNavigateToDashboard }: HeaderProps) {
               </SignedIn>
 
               <Button className="w-full bg-green-600 hover:bg-green-700">
-                Get Started
+                {getStarted}
               </Button>
 
             </div>

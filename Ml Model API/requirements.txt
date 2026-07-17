@@ -13,3 +13,4 @@ google-generativeai
 matplotlib
 seaborn
 python-dotenv
+requests

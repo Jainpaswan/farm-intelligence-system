@@ -7,6 +7,7 @@ import {
   FileText,
 } from "lucide-react";
 import { Button } from "./ui/button";
+import TranslateText from "./TranslateText";
 
 interface AIFeaturesProps {
   onNavigateToPrediction?: () => void;
@@ -70,15 +71,16 @@ export function AIFeatures({
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full mb-4">
-            AI-Powered Tools
+            <TranslateText>AI-Powered Tools</TranslateText>
           </div>
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
-            Advanced Agriculture{" "}
-            <span className="text-green-600">Intelligence</span>
+            <TranslateText>Advanced Agriculture</TranslateText>{" "}
+            <span className="text-green-600">
+              <TranslateText>Intelligence</TranslateText>
+            </span>
           </h2>
           <p className="text-xl text-gray-600">
-            Leverage cutting-edge AI technology to make smarter farming
-            decisions
+            <TranslateText>Leverage cutting-edge AI technology to make smarter farming decisions</TranslateText>
           </p>
         </div>
 
@@ -106,21 +108,21 @@ export function AIFeatures({
                   >
                     <div className="flex items-start gap-4 mb-6">
                       <div
-                        className={`flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center shadow-lg`}
+                        className={`flex-shrink-0 w-16 h-16 rounded-2xl bg-gradient-to-br  ${ feature.color} flex items-center justify-center shadow-lg`}
                       >
                         <Icon className="text-white" size={32} />
                       </div>
                       <div>
                         <div className="inline-block px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm mb-2">
-                          {feature.badge}
+                         <TranslateText>{feature.badge}</TranslateText>
                         </div>
                         <h3 className="text-3xl text-gray-900">
-                          {feature.title}
+                          <TranslateText>{feature.title}</TranslateText>
                         </h3>
                       </div>
                     </div>
                     <p className="text-lg text-gray-600 mb-6">
-                      {feature.description}
+                      <TranslateText>{feature.description}</TranslateText>
                     </p>
                     <Button
                       className="bg-green-600 hover:bg-green-700 w-fit"
@@ -140,7 +142,7 @@ export function AIFeatures({
                         }
                       }}
                     >
-                      Learn More
+                      <TranslateText>Learn More</TranslateText>
                     </Button>
                   </div>
 
@@ -181,13 +183,13 @@ export function AIFeatures({
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-gray-600 mb-6 text-lg">
-            Want to see all features in action?
+            <TranslateText>Want to see all features in action?</TranslateText>
           </p>
           <Button
             size="lg"
             className="bg-green-600 hover:bg-green-700 text-lg px-8 py-6"
           >
-            Schedule a Live Demo
+            <TranslateText>Schedule a Live Demo</TranslateText>
           </Button>
         </div>
       </div>

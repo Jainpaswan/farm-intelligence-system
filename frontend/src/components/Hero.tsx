@@ -1,6 +1,7 @@
 import { Button } from "./ui/button";
 import { ArrowRight, Play, TrendingUp } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import TranslateText from "./TranslateText";
 
 interface HeroProps {
   onNavigateToDashboard?: () => void;
@@ -19,17 +20,21 @@ export function Hero({ onNavigateToDashboard }: HeroProps) {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 text-green-700 rounded-full">
               <span className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-              <span className="text-sm">AI-Powered Agricultural Intelligence</span>
+              <span className="text-sm">
+                <TranslateText>AI-Powered Agricultural Intelligence</TranslateText>
+              </span>
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl text-gray-900">
-              Empowering Farmers with{" "}
-              <span className="text-green-600">Smart Agriculture</span>
+             <TranslateText>Empowering Farmers with</TranslateText>{" "}
+              <span className="text-green-600">
+                <TranslateText>Smart Agriculture</TranslateText>
+              </span>
             </h1>
 
             <p className="text-xl text-gray-600 max-w-xl">
-              AgroSense combines cutting-edge AI technology with agricultural expertise to 
-              help farmers make data-driven decisions, optimize yields, and build sustainable farming practices.
+             <TranslateText>AgroSense combines cutting-edge AI technology with agricultural expertise to 
+              help farmers make data-driven decisions, optimize yields, and build sustainable farming practices.</TranslateText>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -39,15 +44,15 @@ export function Hero({ onNavigateToDashboard }: HeroProps) {
                 onClick={onNavigateToDashboard}
               >
                 <TrendingUp className="mr-2" size={20} />
-                Start Prediction
+                <TranslateText>Start Prediction</TranslateText>
               </Button>
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white text-lg px-8 py-6">
-                Start Free Trial
+                <TranslateText>Start Free Trial</TranslateText>
                 <ArrowRight className="ml-2" size={20} />
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 py-6">
                 <Play className="mr-2" size={20} />
-                Watch Demo
+                <TranslateText>Watch Demo</TranslateText>
               </Button>
             </div>
 
@@ -55,15 +60,21 @@ export function Hero({ onNavigateToDashboard }: HeroProps) {
             <div className="flex flex-wrap gap-8 pt-4">
               <div>
                 <div className="text-3xl text-gray-900">50K+</div>
-                <div className="text-sm text-gray-600">Active Farmers</div>
+                <div className="text-sm text-gray-600">
+                  <TranslateText>Active Farmers</TranslateText>
+                </div>
               </div>
               <div>
                 <div className="text-3xl text-gray-900">2M+</div>
-                <div className="text-sm text-gray-600">Acres Monitored</div>
+                <div className="text-sm text-gray-600">
+                  <TranslateText>Acres Monitored</TranslateText>
+                </div>
               </div>
               <div>
                 <div className="text-3xl text-gray-900">35%</div>
-                <div className="text-sm text-gray-600">Avg. Yield Increase</div>
+                <div className="text-sm text-gray-600">
+                  <TranslateText>Avg. Yield Increase</TranslateText>
+                </div>
               </div>
             </div>
           </div>
@@ -75,8 +86,12 @@ export function Hero({ onNavigateToDashboard }: HeroProps) {
               <div className="bg-gradient-to-r from-green-600 to-green-700 px-6 py-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-white text-sm opacity-90">Welcome back,</div>
-                    <div className="text-white">Farmer Dashboard</div>
+                    <div className="text-white text-sm opacity-90">
+                      <TranslateText>Welcome back,</TranslateText>
+                    </div>
+                    <div className="text-white">
+                      <TranslateText>Farmer Dashboard</TranslateText>
+                    </div>
                   </div>
                   <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
                     <span className="text-white text-lg">👨‍🌾</span>
@@ -89,18 +104,24 @@ export function Hero({ onNavigateToDashboard }: HeroProps) {
                 {/* Quick Stats */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4">
-                    <div className="text-sm text-blue-600 mb-1">Total Fields</div>
+                    <div className="text-sm text-blue-600 mb-1">
+                      <TranslateText>Total Fields</TranslateText>
+                    </div>
                     <div className="text-2xl text-blue-700">24</div>
                   </div>
                   <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4">
-                    <div className="text-sm text-green-600 mb-1">Health Score</div>
+                    <div className="text-sm text-green-600 mb-1">
+                      <TranslateText>Health Score</TranslateText>
+                    </div>
                     <div className="text-2xl text-green-700">98.5%</div>
                   </div>
                 </div>
 
                 {/* Chart Preview */}
                 <div className="bg-gray-50 rounded-xl p-4">
-                  <div className="text-sm text-gray-600 mb-3">Yield Prediction</div>
+                  <div className="text-sm text-gray-600 mb-3">
+                    <TranslateText>Yield Prediction</TranslateText>
+                  </div>
                   <div className="flex items-end justify-between h-32 gap-2">
                     <div className="flex-1 bg-gradient-to-t from-green-500 to-green-400 rounded-t" style={{ height: '60%' }}></div>
                     <div className="flex-1 bg-gradient-to-t from-green-500 to-green-400 rounded-t" style={{ height: '75%' }}></div>

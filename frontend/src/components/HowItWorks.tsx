@@ -1,4 +1,5 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import TranslateText from "./TranslateText";
 
 const steps = [
   {
@@ -30,14 +31,16 @@ export function HowItWorks() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full mb-4">
-            How It Works
+            <TranslateText>How It Works</TranslateText>
           </div>
           <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">
-            Simple Steps to{" "}
-            <span className="text-green-600">Smarter Farming</span>
+            <TranslateText>Simple Steps to</TranslateText>{" "}
+            <span className="text-green-600">
+              <TranslateText>Smarter Farming</TranslateText>
+            </span>
           </h2>
           <p className="text-xl text-gray-600">
-            Get started in minutes and see results in days
+            <TranslateText>Get started in minutes and see results in days</TranslateText>
           </p>
         </div>
 
@@ -55,8 +58,12 @@ export function HowItWorks() {
                   </div>
                 </div>
                 <div className="pt-2">
-                  <h3 className="text-2xl text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600 text-lg">{step.description}</p>
+                  <h3 className="text-2xl text-gray-900 mb-2">
+                    <TranslateText>{step.title}</TranslateText>
+                  </h3>
+                  <p className="text-gray-600 text-lg">
+                    <TranslateText>{step.description}</TranslateText>
+                  </p>
                 </div>
               </div>
             ))}
